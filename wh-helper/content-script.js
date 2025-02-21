@@ -5,6 +5,6 @@ script.innerHTML = `(function (Keisho) {
         configurable: false,
         enumerable: true,
     });
-})(${await chrome.honorifics.get()});`;
+})(${await chrome.honorifics.enabled()});`;
 
 document.body.appendChild(script);
