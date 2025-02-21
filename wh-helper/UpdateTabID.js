@@ -3,10 +3,9 @@ async function UpdateTab(TabID) {
     script.innerHTML = \`(function (Keisho) {
         Object.defineProperty(navigator, "honorifics", {
             get: () => Keisho,
-            configurable: false,
             enumerable: true,
         });
-    })(${await chrome.honorifics.enabled()});\`;
+    })(${await chrome.honorifics.get()});\`;
 
     document.body.appendChild(script);`});
 }
